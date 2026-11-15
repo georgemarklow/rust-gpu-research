@@ -25,6 +25,7 @@
 ## AI Prompts
 
 1. [Explore Requirements](https://github.com/georgemarklow/rust-gpu-research/blob/main/1-explore-requirements.md)
+2. [Request a Design Document](2-request-a-design-document.md)
 
 ### 2. Produce an initial design
 ### 3. Expand technical capabilities
