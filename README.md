@@ -1,27 +1,17 @@
 # GPU Computing with Rust and CubeCL for QR Decomposition
 
-## Table of Contents
-
-- [Objectives](#objectives)
-  - [Understand QR decomposition](#Understand-QR-decomposition)
-  - [Create a design document](#Create-a-design-document)
-  - [Slides Summary](#slides-summary)
-- [List multiple approaches](#List-multiple-approaches)
-- [Competitive Libraries for Benchmarking](Competitive-Libraries-for-Benchmarking)
-- [Citations](#citations)
-- [Overview of Modern Literature](#Overview-of-Modern-Literature)
-- [AI Prompts](#ai-prompts)
-
 ## Objectives
 
-### Understand QR decomposition
-### Create a design document
-### Slides Summary
+- Create a 2-slide summary
+- Understand QR decomposition (formulae with examples)
+- Create a design document
+- List multiple approaches
+- List competitive libraries for benchmarking
 
-## List multiple approaches
-## Competitive Libraries for Benchmarking
-## Citations
-## Overview of Modern Literature
+## Overview
+
+[Overview of Modern Literature with Citations](https://github.com/georgemarklow/rust-gpu-research/blob/main/modern-literature-with-citations.md)
+
 ## AI Prompts
 
 1. [Explore Requirements](https://github.com/georgemarklow/rust-gpu-research/blob/main/1-explore-requirements.md)
