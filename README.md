@@ -14,7 +14,8 @@
 
 ## Overview
 
-[Overview of Modern Literature with Citations](https://github.com/georgemarklow/rust-gpu-research/blob/main/modern-literature-with-citations.md)
+- [Overview of Modern Literature](https://github.com/georgemarklow/rust-gpu-research/blob/main/modern-literature-with-citations.md)
+- [Citations](https://github.com/georgemarklow/rust-gpu-research/blob/main/qr-references.bib)
 
 ## AI Prompts
 
