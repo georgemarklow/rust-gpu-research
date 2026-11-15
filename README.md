@@ -26,11 +26,9 @@
 
 1. [Explore Requirements](https://github.com/georgemarklow/rust-gpu-research/blob/main/1-explore-requirements.md)
 2. [Request a Design Document](2-request-a-design-document.md)
-
-### 2. Produce an initial design
-### 3. Expand technical capabilities
-### 4. Evaluate architectural alternatives
-### 5. Design interfaces for AI agents
-### 6. Generate an implementation package
-### 7. Name the project
-### 8. Bootstrap and implement
+3. Expand technical capabilities
+4. Evaluate architectural alternatives
+5. Design interfaces for AI agents
+6. Generate an implementation package
+7. Name the project
+8. Bootstrap and implement
