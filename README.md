@@ -27,3 +27,4 @@
 1. [Explore Requirements](https://github.com/georgemarklow/rust-gpu-research/blob/main/1-explore-requirements.md)
 2. [Request a Design Document](2-request-a-design-document.md)
 3. [Create an implementation package for Google Antigravity](https://github.com/georgemarklow/rust-gpu-research/blob/main/3-create-implementation-package.md)
+4. [Alternatives](https://github.com/georgemarklow/rust-gpu-research/blob/main/4-alternatives.md)
