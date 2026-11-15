@@ -8,6 +8,10 @@
 - List multiple approaches
 - List competitive libraries for benchmarking
 
+## Slides
+
+[Slides]()
+
 ## Overview
 
 [Overview of Modern Literature with Citations](https://github.com/georgemarklow/rust-gpu-research/blob/main/modern-literature-with-citations.md)
