@@ -1,4 +1,4 @@
-# Request
+# Request 1
 
 *"I would like to design a library using Rust and CubeCL to perform QR decomposition. Please help me with the design decisions. What approach would work? How should the interface work? What are the key functions to implement first? Please grill me until you have enough information to suggest a design."*
 
@@ -280,4 +280,7 @@ cubecl-qr/
 - **Testing f64:** there's no CUDA device on the Mac, so f64 needs other hardware or a CI runner.
 
 Neither of these blocks milestones 1–3.
+
+
+
 
