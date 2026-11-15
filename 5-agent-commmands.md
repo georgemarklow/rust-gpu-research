@@ -2,6 +2,10 @@
 
 *"Finally, can we come up with AI agent commands? For example, (1) /bootstrap-workspace to initialise the Rust project, create crate names and replace project-name placeholders. (2) continue; to direct the agent to complete the next roadmap task, including tests and a local Git commit."*
 
+# Updated kit
+
+[Updated Kit](https://github.com/georgemarklow/rust-gpu-research/blob/main/cubecl-qr-antigravity-kit-2.zip)
+
 # Agent commands
 
 These are the commands to give the agent in Google Antigravity. Slash commands run a skill from `.agents/skills/`; plain words such as "continue" trigger the same skills through their descriptions.
@@ -39,3 +43,44 @@ These are the commands to give the agent in Google Antigravity. Slash commands r
 **`continue`** is the command you will use most. Each time, the agent:
 
 1. checks for uncommitted work from a previous session and offers to finish it first;
+2. reads the last progress entries and finds the first unticked task of the current milestone (or the task you named);
+3. splits the task first if it is too big for one session;
+4. writes a plan (files, API changes, formulas, launch grid, tests) and waits for your approval only if it changes a public API, adds a dependency, loosens a tolerance or contradicts a decision;
+5. implements it in small compiling steps, using `/add-kernel` and `/accuracy-check` where they apply;
+6. runs `/verify` until green, without weakening tests;
+7. ticks the task in `docs/roadmap.md`, appends to `docs/progress.md`, and makes a local commit with a Conventional Commits message, for example `feat(kernels): add make_reflector`;
+8. names the next task, or suggests `/milestone-gate` when the milestone is complete.
+
+It never pushes, and never starts the next milestone, unless you ask.
+
+Useful variations:
+
+| Say | Effect |
+| --- | --- |
+| `continue` | The next task |
+| `continue with M2.3` | A specific task |
+| `continue, plan only` | Stop after the plan, for review |
+| `/status` then `continue` | Check where things stand before starting a session |
+
+## Checking quality
+
+- **`/verify`**: run any time; `continue` runs it before every commit. Set `QR_GPU_TESTS=1` if GPU tests are gated in CI (D-016).
+- **`/accuracy-check`**: after changing anything that affects results, and at every gate. Reports ρ_res, ρ_orth, δ_R and δ_τ per test matrix.
+- **`/benchmark`**: from milestone M2. Flags such as `--sizes`, `--panel-widths`, `--cube-dims` and `--baselines` select a sweep; results go to `results/run_<timestamp>/`.
+
+## Milestones and decisions
+
+- **`/milestone-gate`** when every task of a milestone is ticked. It writes `docs/milestones/<id>-gate.md` with the evidence, and at M2 prepares release 0.1 up to, but not including, `cargo publish`.
+- **`/record-decision`** to settle a Proposed decision, add a new one or, with your approval, supersede an Accepted one. For example: `/record-decision accept D-014 with nb = 64`.
+
+## Maintenance
+
+- **`/upgrade-cubecl`** when you want a newer CubeCL. It works on its own branch, fixes known API changes, re-runs `/accuracy-check`, compares benchmarks, and asks before merging.
+
+## What the agent will always ask you about
+
+- Pushing, force-pushing, tagging, publishing or changing remotes.
+- Anything that contradicts an Accepted decision.
+- A dependency outside the license allowlist, or any C dependency in the library crate.
+- Loosening an accuracy threshold or test.
+- Work from a later milestone.
