@@ -4,4 +4,4 @@
 
 # Response
 
-TODO
+[CubeCl QR Antigravity Kit](https://github.com/georgemarklow/rust-gpu-research/blob/main/cubecl-qr-antigravity-kit.zip)
