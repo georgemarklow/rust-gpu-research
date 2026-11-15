@@ -25,6 +25,15 @@
 ## AI Prompts
 
 ### 1. Explore requirements
+
+#### Request
+
+*"I would like to design a library using Rust and CubeCL to perform QR decomposition. Please help me with the design decisions. What approach would work? How should the interface work? What are the key functions to implement first? Please grill me until you have enough information to suggest a design."*
+
+#### Response
+
+TODO
+
 ### 2. Produce an initial design
 ### 3. Expand technical capabilities
 ### 4. Evaluate architectural alternatives
