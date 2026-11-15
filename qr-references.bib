@@ -1,0 +1,427 @@
+% References for "Literature overview: QR decomposition on GPUs with Rust and CubeCL"
+% (qr-literature-overview.md), as of 15 November 2026.
+% Entries marked "verified" in a note were checked online on that date; check the others
+% (page numbers, DOIs) against the publisher before submitting.
+
+% ---------- 1. Foundations ----------
+
+@article{householder1958unitary,
+  author  = {Householder, Alston S.},
+  title   = {Unitary Triangularization of a Nonsymmetric Matrix},
+  journal = {Journal of the ACM},
+  volume  = {5},
+  number  = {4},
+  pages   = {339--342},
+  year    = {1958},
+  doi     = {10.1145/320941.320947}
+}
+
+@article{golub1965numerical,
+  author  = {Golub, Gene H.},
+  title   = {Numerical Methods for Solving Linear Least Squares Problems},
+  journal = {Numerische Mathematik},
+  volume  = {7},
+  number  = {3},
+  pages   = {206--216},
+  year    = {1965},
+  doi     = {10.1007/BF01436075}
+}
+
+@book{golub2013matrix,
+  author    = {Golub, Gene H. and Van Loan, Charles F.},
+  title     = {Matrix Computations},
+  edition   = {4},
+  publisher = {Johns Hopkins University Press},
+  year      = {2013},
+  isbn      = {978-1-4214-0794-4}
+}
+
+@book{trefethen1997numerical,
+  author    = {Trefethen, Lloyd N. and Bau, III, David},
+  title     = {Numerical Linear Algebra},
+  publisher = {SIAM},
+  year      = {1997},
+  doi       = {10.1137/1.9780898719574}
+}
+
+@book{higham2002accuracy,
+  author    = {Higham, Nicholas J.},
+  title     = {Accuracy and Stability of Numerical Algorithms},
+  edition   = {2},
+  publisher = {SIAM},
+  year      = {2002},
+  doi       = {10.1137/1.9780898718027}
+}
+
+% ---------- 2. Blocked QR and the compact WY form ----------
+
+@article{bischof1987wy,
+  author  = {Bischof, Christian and Van Loan, Charles},
+  title   = {The {WY} Representation for Products of {Householder} Matrices},
+  journal = {SIAM Journal on Scientific and Statistical Computing},
+  volume  = {8},
+  number  = {1},
+  pages   = {s2--s13},
+  year    = {1987},
+  doi     = {10.1137/0908009}
+}
+
+@article{schreiber1989storage,
+  author  = {Schreiber, Robert and Van Loan, Charles},
+  title   = {A Storage-Efficient {WY} Representation for Products of {Householder} Transformations},
+  journal = {SIAM Journal on Scientific and Statistical Computing},
+  volume  = {10},
+  number  = {1},
+  pages   = {53--57},
+  year    = {1989},
+  doi     = {10.1137/0910005}
+}
+
+@book{anderson1999lapack,
+  author    = {Anderson, E. and Bai, Z. and Bischof, C. and Blackford, S. and Demmel, J. and Dongarra, J. and Du Croz, J. and Greenbaum, A. and Hammarling, S. and McKenney, A. and Sorensen, D.},
+  title     = {{LAPACK} Users' Guide},
+  edition   = {3},
+  publisher = {SIAM},
+  year      = {1999},
+  doi       = {10.1137/1.9780898719604}
+}
+
+@article{elmroth2000recursion,
+  author  = {Elmroth, Erik and Gustavson, Fred G.},
+  title   = {Applying Recursion to Serial and Parallel {QR} Factorization Leads to Better Performance},
+  journal = {IBM Journal of Research and Development},
+  volume  = {44},
+  number  = {4},
+  pages   = {605--624},
+  year    = {2000},
+  doi     = {10.1147/rd.444.0605}
+}
+
+% ---------- 3. Safe norms ----------
+
+@article{blue1978portable,
+  author  = {Blue, James L.},
+  title   = {A Portable {Fortran} Program to Find the {Euclidean} Norm of a Vector},
+  journal = {ACM Transactions on Mathematical Software},
+  volume  = {4},
+  number  = {1},
+  pages   = {15--23},
+  year    = {1978},
+  doi     = {10.1145/355769.355771}
+}
+
+@article{anderson2017safe,
+  author  = {Anderson, Edward},
+  title   = {Algorithm 978: Safe Scaling in the Level 1 {BLAS}},
+  journal = {ACM Transactions on Mathematical Software},
+  volume  = {44},
+  number  = {1},
+  pages   = {12:1--12:28},
+  year    = {2017},
+  doi     = {10.1145/3061665}
+}
+
+% ---------- 4. Dense linear algebra on GPUs ----------
+
+@inproceedings{volkov2008benchmarking,
+  author    = {Volkov, Vasily and Demmel, James W.},
+  title     = {Benchmarking {GPUs} to Tune Dense Linear Algebra},
+  booktitle = {Proceedings of the 2008 ACM/IEEE Conference on Supercomputing (SC08)},
+  year      = {2008},
+  doi       = {10.1109/SC.2008.5214359}
+}
+
+@article{tomov2010towards,
+  author  = {Tomov, Stanimire and Dongarra, Jack and Baboulin, Marc},
+  title   = {Towards Dense Linear Algebra for Hybrid {GPU} Accelerated Manycore Systems},
+  journal = {Parallel Computing},
+  volume  = {36},
+  number  = {5--6},
+  pages   = {232--240},
+  year    = {2010},
+  doi     = {10.1016/j.parco.2009.12.005}
+}
+
+@article{agullo2009numerical,
+  author  = {Agullo, Emmanuel and Demmel, Jim and Dongarra, Jack and Hadri, Bilel and Kurzak, Jakub and Langou, Julien and Ltaief, Hatem and Luszczek, Piotr and Tomov, Stanimire},
+  title   = {Numerical Linear Algebra on Emerging Architectures: The {PLASMA} and {MAGMA} Projects},
+  journal = {Journal of Physics: Conference Series},
+  volume  = {180},
+  pages   = {012037},
+  year    = {2009},
+  doi     = {10.1088/1742-6596/180/1/012037}
+}
+
+@article{buttari2009class,
+  author  = {Buttari, Alfredo and Langou, Julien and Kurzak, Jakub and Dongarra, Jack},
+  title   = {A Class of Parallel Tiled Linear Algebra Algorithms for Multicore Architectures},
+  journal = {Parallel Computing},
+  volume  = {35},
+  number  = {1},
+  pages   = {38--53},
+  year    = {2009},
+  doi     = {10.1016/j.parco.2008.10.002}
+}
+
+% ---------- 5. Communication-avoiding QR and tall-skinny matrices ----------
+
+@article{demmel2012communication,
+  author  = {Demmel, James and Grigori, Laura and Hoemmen, Mark and Langou, Julien},
+  title   = {Communication-Optimal Parallel and Sequential {QR} and {LU} Factorizations},
+  journal = {SIAM Journal on Scientific Computing},
+  volume  = {34},
+  number  = {1},
+  pages   = {A206--A239},
+  year    = {2012},
+  doi     = {10.1137/080731992}
+}
+
+@inproceedings{anderson2011communication,
+  author    = {Anderson, Michael and Ballard, Grey and Demmel, James and Keutzer, Kurt},
+  title     = {Communication-Avoiding {QR} Decomposition for {GPUs}},
+  booktitle = {Proceedings of the IEEE International Parallel \& Distributed Processing Symposium (IPDPS)},
+  year      = {2011},
+  doi       = {10.1109/IPDPS.2011.15}
+}
+
+@article{ballard2014communication,
+  author  = {Ballard, Grey and Carson, Erin and Demmel, James and Hoemmen, Mark and Knight, Nicholas and Schwartz, Oded},
+  title   = {Communication Lower Bounds and Optimal Algorithms for Numerical Linear Algebra},
+  journal = {Acta Numerica},
+  volume  = {23},
+  pages   = {1--155},
+  year    = {2014},
+  doi     = {10.1017/S0962492914000038}
+}
+
+@misc{thies2026tsqr,
+  author        = {Thies, Jonas and R{\"o}hrig-Z{\"o}llner, Melven},
+  title         = {Implementation of {QR} Factorization of Tall and Very Skinny Matrices on Current {GPUs}},
+  year          = {2026},
+  eprint        = {2603.20889},
+  archivePrefix = {arXiv},
+  note          = {Preprint; verified 2026-11-15}
+}
+
+% ---------- 6. Batched QR ----------
+
+@article{haidar2015batched,
+  author  = {Haidar, Azzam and Dong, Tingxing and Luszczek, Piotr and Tomov, Stanimire and Dongarra, Jack},
+  title   = {Batched Matrix Computations on Hardware Accelerators Based on {GPUs}},
+  journal = {International Journal of High Performance Computing Applications},
+  volume  = {29},
+  number  = {2},
+  pages   = {193--208},
+  year    = {2015},
+  doi     = {10.1177/1094342014567546},
+  note    = {Verified 2026-11-15}
+}
+
+% ---------- 7. Mixed precision, tensor cores and randomized QR ----------
+
+@inproceedings{zhang2020high,
+  author    = {Zhang, Shaoshuai and Baharlouei, Elaheh and Wu, Panruo},
+  title     = {High Accuracy Matrix Computations on Neural Engines: A Study of {QR} Factorization and its Applications},
+  booktitle = {Proceedings of the 29th International Symposium on High-Performance Parallel and Distributed Computing (HPDC '20)},
+  pages     = {17--28},
+  publisher = {ACM},
+  year      = {2020},
+  doi       = {10.1145/3369583.3392685},
+  note      = {Verified 2026-11-15; author order per the LATER project page}
+}
+
+@misc{zhang2019tensorcore,
+  author        = {Zhang, Shaoshuai and Wu, Panruo},
+  title         = {High Accuracy Low Precision {QR} Factorization and Least Square Solver on {GPU} with {TensorCore}},
+  year          = {2019},
+  eprint        = {1912.05508},
+  archivePrefix = {arXiv},
+  note          = {Verified 2026-11-15}
+}
+
+@misc{ieee10816084,
+  title        = {High Performance {Householder} {QR} Factorization on Emerging {GPU} Architectures Using Tensor Cores},
+  howpublished = {IEEE Xplore document 10816084, \url{https://ieeexplore.ieee.org/document/10816084}},
+  note         = {Title confirmed 2026-11-15; complete authors, venue and year from IEEE Xplore before citing}
+}
+
+@misc{benner2026reduced,
+  author        = {Benner, Peter and K{\"o}hler, Martin and Liu, Xiaobo and Oktay, Eda},
+  title         = {Reduced and Mixed-Precision Block {Householder} {QR} Factorization},
+  year          = {2026},
+  eprint        = {2610.38537},
+  archivePrefix = {arXiv},
+  note          = {Preprint; verified 2026-11-15}
+}
+
+@misc{grigori2024randomized,
+  author        = {Grigori, Laura and Timsit, Edouard},
+  title         = {Randomized {Householder} {QR}},
+  year          = {2024},
+  eprint        = {2405.10923},
+  archivePrefix = {arXiv},
+  note          = {Verified 2026-11-15}
+}
+
+@misc{dedamas2025randomized,
+  author        = {de Damas, J. G. and Grigori, Laura and Simunec, I. and Timsit, Edouard},
+  title         = {Randomized Orthogonalization and {Krylov} Subspace Methods: Principles and Algorithms},
+  year          = {2025},
+  eprint        = {2512.15455},
+  archivePrefix = {arXiv},
+  note          = {Verified 2026-11-15; check first-name initials}
+}
+
+@misc{garrison2026choleskyqr,
+  author        = {Garrison, James E. and Chen, Chao and Ipsen, Ilse C. F.},
+  title         = {Numerically Stable {Cholesky-QR} on {GPU} via Mixed-Precision Randomized Preconditioning},
+  year          = {2026},
+  eprint        = {2606.18411},
+  archivePrefix = {arXiv},
+  note          = {Preprint; verified 2026-11-15}
+}
+
+@article{higham2022mixed,
+  author  = {Higham, Nicholas J. and Mary, Theo},
+  title   = {Mixed Precision Algorithms in Numerical Linear Algebra},
+  journal = {Acta Numerica},
+  volume  = {31},
+  pages   = {347--414},
+  year    = {2022},
+  doi     = {10.1017/S0962492922000022}
+}
+
+@article{abdelfattah2021survey,
+  author  = {Abdelfattah, Ahmad and Anzt, Hartwig and Boman, Erik G. and Carson, Erin and Cojean, Terry and Dongarra, Jack and Fox, Alyson and Gates, Mark and Higham, Nicholas J. and Li, Xiaoye S. and Loe, Jennifer and Luszczek, Piotr and Pranesh, Srikara and Rajamanickam, Siva and Ribizel, Tobias and Smith, Barry F. and Swirydowicz, Kasia and Thomas, Stephen and Tomov, Stanimire and Tsai, Yaohung M. and Yang, Ulrike Meier},
+  title   = {A Survey of Numerical Linear Algebra Methods Utilizing Mixed-Precision Arithmetic},
+  journal = {International Journal of High Performance Computing Applications},
+  volume  = {35},
+  number  = {4},
+  pages   = {344--369},
+  year    = {2021},
+  doi     = {10.1177/10943420211003313}
+}
+
+@inproceedings{fukaya2014choleskyqr2,
+  author    = {Fukaya, Takeshi and Nakatsukasa, Yuji and Yanagisawa, Yuka and Yamamoto, Yusaku},
+  title     = {{CholeskyQR2}: A Simple and Communication-Avoiding Algorithm for Computing a Tall-Skinny {QR} Factorization on a Large-Scale Parallel System},
+  booktitle = {Proceedings of the 5th Workshop on Latest Advances in Scalable Algorithms for Large-Scale Systems (ScalA)},
+  year      = {2014},
+  doi       = {10.1109/ScalA.2014.11}
+}
+
+@article{yamamoto2015roundoff,
+  author  = {Yamamoto, Yusaku and Nakatsukasa, Yuji and Yanagisawa, Yuka and Fukaya, Takeshi},
+  title   = {Roundoff Error Analysis of the {CholeskyQR2} Algorithm},
+  journal = {Electronic Transactions on Numerical Analysis},
+  volume  = {44},
+  pages   = {306--326},
+  year    = {2015}
+}
+
+% ---------- 8. Portable GPU programming ----------
+
+@inproceedings{ringoot2025performant,
+  author        = {Ringoot, Evelyne and Alomairy, Rabab and Churavy, Valentin and Edelman, Alan},
+  title         = {Performant Unified {GPU} Kernels for Portable Singular Value Computation Across Hardware and Precision},
+  booktitle     = {Proceedings of the 54th International Conference on Parallel Processing (ICPP 2025)},
+  pages         = {500--510},
+  publisher     = {ACM},
+  year          = {2025},
+  eprint        = {2508.06339},
+  archivePrefix = {arXiv},
+  note          = {Verified 2026-11-15}
+}
+
+@article{trott2022kokkos,
+  author  = {Trott, Christian R. and Lebrun-Grandi{\'e}, Damien and Arndt, Daniel and Ciesko, Jan and Dang, Vinh and Ellingwood, Nathan and Gayatri, Rahulkumar and Harvey, Evan and Hollman, Daisy S. and Ibanez, Dan and Liber, Nevin and Madsen, Jonathan and Miles, Jeff and Poliakoff, David and Powell, Amy and Rajamanickam, Sivasankaran and Simberg, Mikael and Sunderland, Dan and Turcksin, Bruno and Wilke, Jeremiah},
+  title   = {Kokkos 3: Programming Model Extensions for the Exascale Era},
+  journal = {IEEE Transactions on Parallel and Distributed Systems},
+  volume  = {33},
+  number  = {4},
+  pages   = {805--817},
+  year    = {2022},
+  doi     = {10.1109/TPDS.2021.3097283}
+}
+
+@misc{cubecl,
+  author       = {{Tracel AI}},
+  title        = {{CubeCL}: Multi-Platform High-Performance Compute Language Extension for {Rust}},
+  howpublished = {\url{https://github.com/tracel-ai/cubecl}},
+  note         = {Software; this project uses version 0.7. Add the release date of the version you cite}
+}
+
+@misc{webgpu,
+  author       = {{W3C GPU for the Web Working Group}},
+  title        = {{WebGPU} and {WebGPU} Shading Language ({WGSL})},
+  howpublished = {W3C Candidate Recommendations, \url{https://www.w3.org/TR/webgpu/} and \url{https://www.w3.org/TR/WGSL/}}
+}
+
+% ---------- 9. Rust ----------
+
+@article{perkel2020rust,
+  author  = {Perkel, Jeffrey M.},
+  title   = {Why Scientists Are Turning to {Rust}},
+  journal = {Nature},
+  volume  = {588},
+  pages   = {185--186},
+  year    = {2020},
+  doi     = {10.1038/d41586-020-03382-2}
+}
+
+@article{jung2018rustbelt,
+  author  = {Jung, Ralf and Jourdan, Jacques-Henri and Krebbers, Robbert and Dreyer, Derek},
+  title   = {{RustBelt}: Securing the Foundations of the {Rust} Programming Language},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume  = {2},
+  number  = {POPL},
+  pages   = {66:1--66:34},
+  year    = {2018},
+  doi     = {10.1145/3158154}
+}
+
+@article{quinones2026faer,
+  author  = {Qui{\~n}ones El Kazdadi, Sarah},
+  title   = {faer: A Linear Algebra Library for the {Rust} Programming Language},
+  journal = {Journal of Open Source Software},
+  volume  = {11},
+  number  = {123},
+  pages   = {6099},
+  year    = {2026},
+  doi     = {10.21105/joss.06099},
+  note    = {Verified 2026-11-15}
+}
+
+@book{klabnik2023rust,
+  author    = {Klabnik, Steve and Nichols, Carol},
+  title     = {The {Rust} Programming Language},
+  edition   = {2},
+  publisher = {No Starch Press},
+  year      = {2023}
+}
+
+% ---------- 10. Baselines and vendor documentation ----------
+
+@misc{lapack,
+  title        = {{LAPACK}: Linear Algebra {PACKage}, version 3.12},
+  howpublished = {\url{https://www.netlib.org/lapack/}}
+}
+
+@manual{nvidia2026cusolver,
+  organization = {NVIDIA},
+  title        = {{cuSOLVER} {API} Reference, {CUDA} Toolkit 13.4},
+  url          = {https://docs.nvidia.com/cuda/archive/13.4.1/cusolver/index.html},
+  note         = {Verified 2026-11-15}
+}
+
+@misc{cudarc,
+  title        = {cudarc: Safe {Rust} Wrappers for the {CUDA} Driver, {cuBLAS} and {cuSOLVER}},
+  howpublished = {\url{https://docs.rs/cudarc}},
+  note         = {Software, version 0.19}
+}
+
+@manual{apple_accelerate,
+  organization = {Apple},
+  title        = {Accelerate Framework Documentation},
+  url          = {https://developer.apple.com/documentation/accelerate}
+}
