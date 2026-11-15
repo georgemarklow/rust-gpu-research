@@ -23,3 +23,12 @@
 ## Citations
 ## Overview of Modern Literature
 ## AI Prompts
+
+### 1. Explore requirements
+### 2. Produce an initial design
+### 3. Expand technical capabilities
+### 4. Evaluate architectural alternatives
+### 5. Design interfaces for AI agents
+### 6. Generate an implementation package
+### 7. Name the project
+### 8. Bootstrap and implement
