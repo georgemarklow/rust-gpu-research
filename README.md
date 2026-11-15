@@ -3,9 +3,9 @@
 ## Table of Contents
 
 - [Objectives](#objectives)
-  - [Understand QR decomposition with formulae and examples](#linear-algebra)
+  - [Understand QR decomposition](#Understand-QR-decomposition)
   - [Create a design document](#Create-a-design-document)
-  - [Slides Summary](#kronecker-algebra)
+  - [Slides Summary](#slides-summary)
 - [List multiple approaches](#List-multiple-approaches)
 - [Citations](#citations)
 - [Overview of Modern Literature](#Overview-of-Modern-Literature)
