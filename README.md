@@ -7,6 +7,7 @@
   - [Create a design document](#Create-a-design-document)
   - [Slides Summary](#slides-summary)
 - [List multiple approaches](#List-multiple-approaches)
+- [Competitive Libraries for Benchmarking](Competitive-Libraries-for-Benchmarking)
 - [Citations](#citations)
 - [Overview of Modern Literature](#Overview-of-Modern-Literature)
 - [AI Prompts](#ai-prompts)
@@ -18,6 +19,7 @@
 ### Slides Summary
 
 ## List multiple approaches
+## Competitive Libraries for Benchmarking
 ## Citations
 ## Overview of Modern Literature
 ## AI Prompts
